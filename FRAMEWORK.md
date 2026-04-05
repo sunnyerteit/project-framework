@@ -150,8 +150,9 @@ What were the options? What drove the choice? What was uncertain?
 
 ## 2. Goals & Non-Goals [REQUIRED]
 
-### Goals
-- [ ] Goal 1
+### Goals — ranked by importance
+- [ ] **G1 —** Goal 1
+- [ ] **G2 —** Goal 2
 
 ### Non-Goals
 - Not doing X
@@ -160,7 +161,7 @@ What were the options? What drove the choice? What was uncertain?
 
 ## 3. Stakeholders [REQUIRED]
 
-| Role | Name/Entity | Involvement |
+| Role | Name | Involvement |
 |---|---|---|
 | Owner | | Final decisions, sign-off |
 | Contributor | | Active work |
@@ -184,12 +185,11 @@ What were the options? What drove the choice? What was uncertain?
 
 ## 5. Timeline & Milestones
 
-| Milestone | Target Date | Linked Tasks | Status |
+| Milestone | Date | Description | Status |
 |---|---|---|---|
-| Kickoff | | TASK-001 | ⬜ Not Started |
-| Feasibility / Feed Study | | TASK-002 | ⬜ Not Started |
-| Phase 1 Complete | | TASK-003 | ⬜ Not Started |
-| Launch / Completion | | TASK-004 | ⬜ Not Started |
+| Kickoff | | Framework structure established | ⬜ Not Started |
+| [Phase milestone] | | | ⬜ Not Started |
+| [Completion milestone] | | | ⬜ Not Started |
 
 ---
 
@@ -253,19 +253,14 @@ Earlier stages are locked once the next stage begins.
 | Task board | [TASKS.md](./TASKS.md) |
 | Risk register | [RISKS.md](./RISKS.md) |
 | Changelog | [changelog/CHANGELOG.md](./changelog/CHANGELOG.md) |
+| Notes | [NOTES.md](./NOTES.md) |
 
 ---
 
 ## 8. Communication Plan
 
 **Check-in frequency:** [Daily / Weekly / As needed]
-**Decision log:** [CHANGELOG.md — Decision entries](./changelog/CHANGELOG.md)
-
----
-
-## 9. Notes & Open Questions
-
-- [ ] Open question 1
+**Decision log:** [changelog/CHANGELOG.md](./changelog/CHANGELOG.md)
 ```
 
 ---
