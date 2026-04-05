@@ -68,9 +68,12 @@ The changelog is a running record of the work — honest, direct, and written to
 
 ### Rules
 
-- **Claude never writes a changelog entry without explicit instruction from the human.**
-- Claude drafts the full entry including "The humans note", then prompts for approval before saving.
-- The human may edit, rewrite, or reject the draft before it is committed.
+- **Claude never writes a changelog entry unprompted.** Entries are written after significant work only — roughly once every 1–4 days, not after every small change.
+- **When the time comes, Claude initiates the process in two steps:**
+  1. Claude presents its full draft of the entry for review and approval.
+  2. Claude then separately prompts the human for "The humans note" in Norwegian.
+- **Nothing is written to CHANGELOG.md until both parts are approved by the human.**
+- The human may edit, rewrite, or reject any part of the draft before it is committed.
 
 ### Entry Format
 
@@ -85,7 +88,7 @@ The changelog is a running record of the work — honest, direct, and written to
 
 **The humans note**
 > [Drafted by Claude, written from the human's perspective, in Norwegian.
-> Approved or edited by the human before the entry is saved.
+> Prompted separately after the main entry is approved.
 > A short, personal reaction — what this felt like, what mattered, what was uncertain.]
 
 **What happened**
@@ -275,9 +278,10 @@ Earlier stages are locked once the next stage begins.
 project-framework/
 ├── FRAMEWORK.md          ← This file
 ├── README.md             ← Repo intro and how to use
+├── TASKS.md              ← Master task registry (all projects)
 ├── RISKS.md              ← Programme-level risks
-├── changelog/
-│   └── CHANGELOG.md      ← Updated only on explicit instruction
+└── changelog/
+    └── CHANGELOG.md      ← Updated only on explicit instruction
 ```
 
 ### Per-Project Repo (`proj-NNN-name`)
@@ -348,7 +352,8 @@ proj-NNN-name/
 | v1.1 | 2026-04-05 | Task IDs, detailed task format, staged budget, risk register, publishable changelog | Feedback after v1.0 |
 | v1.2 | 2026-04-05 | "The humans note" format, Claude prompts before changelog entries, Norwegian | Feedback after v1.1 |
 | v1.3 | 2026-04-05 | Separated tasks/risks/changelog into own files; charter is now a reference doc; Claude never writes changelog without instruction | Feedback after v1.2 |
+| v1.4 | 2026-04-05 | Changelog cadence defined (1–4 days); two-step prompt process: Claude drafts entry first, then prompts for humans note separately | Feedback after v1.3 |
 
 ---
 
-*Last updated: 2026-04-05 — Framework v1.3*
+*Last updated: 2026-04-05 — Framework v1.4*
