@@ -21,9 +21,4 @@ The changelog is written to be read. It's an honest record of how things actuall
 
 ---
 
-## Project Index
-
-
----
-
 *Framework version: v1.1 — last updated 2026-04-05*

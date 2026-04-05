@@ -4,27 +4,33 @@ This is the running record of work across all projects — progress updates, dec
 
 ---
 
-### 2026-04-05 — Framework Built From Scratch
+### 2026-04-05 — Kickoff: Framework Established
 
-**Project:** project-framework
+**Project:** Project Framework (PROJ-001)
 **Type:** Milestone
 **Status:** ✅ Complete
 
 **The humans note**
-> I see this whole endeavour as resume-building. I want the work itself — not just the outcomes — to be visible. Starting with the framework felt right. If I can't organize how I work, I can't credibly claim to build anything else well.
+> Dette var veldig gøy altså! Så målet her er å bli bedre kjent med KI-tjenester, og hvordan man aktivt kan bruke disse for å tilby support i prosjekter. Prosjekter er mye rart, men styringen av dem omhandler nødvendigvis mye om forvaltning av informasjon. Og her er antakeligvis Claude og andre tjenester bedre enn oss allerede i dag.
+>
+> Jeg tror dette kan bli veldig bra. Nå gjelder det å lage et godt grensesnitt mellom meg selv og Claude - jeg merker at den enda er litt for lite autonom for min del. Men vi kommer til å klare det etterhvert og da er det bare å peise på!
+>
+> S🌞nny
 
 **What happened**
-Started from zero and built a complete operational framework to underpin all future projects. The framework covers how work gets tracked, how decisions get documented, how budgets are staged, and how Claude and I collaborate day to day. It went through two full rounds of feedback and revision before being published here.
+Built a complete operational framework from scratch in a single session. The system now covers how work gets tracked, how decisions get made, how Claude and Sunny collaborate day to day, and how everything gets documented. The interaction model in particular required several rounds of iteration — by the end of the session it had grown from a basic decision flowchart into a full operating agreement covering session memory, version control, disagreement handling, and approval conventions.
 
 **The thinking behind it**
-The goal wasn't just to have a system — it was to have a system worth showing. Every piece of this framework is designed to be legible to an outsider: the changelog could be published, the charters could be shared, the task IDs create a traceable thread across documents. That transparency is the point. This is as much a portfolio artifact as it is a productivity tool.
+The goal from the start was to build something worth showing, not just something that works. Every piece — the changelog, the charter, the interaction model — is designed to be legible to an outside reader. What emerged during the session was as important as what was planned: the system improved by actually being used while it was being built. That feedback loop is the point.
 
 **Tasks affected**
-- TASK-000 → Done (defined the four pillars)
-- TASK-001 → Done (built and finalized the framework)
-- TASK-002 → To Do (start first real project)
+- TASK-000 → Done (four pillars defined)
+- TASK-001 → Done (framework built and published)
+- TASK-003 → Done (PROJ-001 charter written)
+- TASK-004 → In Progress (INTERACTION.md — active, ongoing)
 
 **Next steps**
-- [ ] TASK-002 — Identify and charter the first concrete project
+- [ ] TASK-004 — Continue iterating INTERACTION.md
+- [ ] TASK-002 — Identify and charter the first real project (on hold)
 
 ---
