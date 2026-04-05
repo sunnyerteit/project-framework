@@ -12,15 +12,16 @@
   - **Dependencies:** TASK-001 must be complete.
   - **Linked to:** Milestone: First real project started | PROJ-001 Section 5
 
+---
+
+## 🔄 In Progress
+
 - [ ] [P1] TASK-004 — Create INTERACTION.md
   - **Goal:** A standalone document explicitly defining how Sunny, Claude, and the external world interact — in prose and as a flowchart.
   - **Context:** This is G1 in the charter, the foundation of the framework.
   - **Dependencies:** TASK-003 must be complete.
   - **Linked to:** Milestone: INTERACTION.md created | PROJ-001 Section 5
-
----
-
-## 🔄 In Progress
+  - **Notes:** Markdown document created 2026-04-05. Needs further iteration before approval.
 
 ---
 
