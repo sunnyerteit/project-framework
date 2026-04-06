@@ -4,6 +4,31 @@ This is the running record of work across all projects — progress updates, dec
 
 ---
 
+### 2026-04-06 — Framework Restructured for Reuse
+
+**Project:** Project Framework (PROJ-001)
+**Type:** Milestone
+**Status:** 🟢 On Track
+
+**The humans note**
+> Dette har vært en interessant runde. Jeg føler at modellen nå jobber mer slik som jeg forventer at den skal jobbe. Det er veldig bra! Jeg ønsker fortsatt at vi skal jobbe mer sammen for at den skal bli mer autonom. Det tror jeg kan komme på plass om litt.
+>
+> Nå føler jeg at det rammeverket som er her kan brukes i forbindelse med andre prosjekter. Ja, selvfølgelig kunne vi ha gjort en finpuss her og der. Men jeg tror at både jeg og Claude kan lære mye av å bare å ta det nåværende verktøyet og teste det i et noenlunde ekte scenarie.
+>
+> Et lite problem som jeg føler at jeg har støtt på, som kan bli et problem er tilgjengelige tokens, eller tilgjengelig bruk av tjenesten. Slik det foreligger nå så bruker vi lett opp alt vi har av datakraft i løpet av en halvtime, selv med pro-lisens. Om dette er fordi vi er i Cowork e.l. er jeg litt usikker på. Det er mulig at vi må forandre på oppsettet om vi har lyst til å jobbe videre på fornuftig vis.
+>
+> Dette har hittil vært et veldig gøy og lærerikt eksperiment. Spent på å se hva som skjer videre!
+>
+> S🌞nny
+
+**What happened**
+The framework is now genuinely reusable. Session 2 added starter templates for all project files and an explicit "starting a new project" checklist to FRAMEWORK.md, so any future project can be bootstrapped cleanly. Alongside this, the interaction model was tightened — file edits now require exact proposed content before approval, reflected in both prose and an updated flowchart. The risk register was reviewed and expanded with four new risks including user-side risks. Token efficiency was addressed by trimming verbose sections and restricting session-start reads to NOW.md only.
+
+**The thinking behind it**
+The session surfaced that the framework needed to be separated from PROJ-001's specific files — and that portability required clarity about what travels with every project (FRAMEWORK.md and INTERACTION.md, identical copies) versus what is project-specific. The token efficiency discussion was a useful forcing function: complexity has a real cost per session, and that shapes how we define the threshold in TASK-005.
+
+---
+
 ### 2026-04-05 — Kickoff: Framework Established
 
 **Project:** Project Framework (PROJ-001)

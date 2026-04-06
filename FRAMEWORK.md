@@ -10,53 +10,12 @@
 2. [Blog & Changelog System](#2-blog--changelog-system)
 3. [Project Charter Template](#3-project-charter-template)
 4. [File & Document Structure](#4-file--document-structure)
-5. [Framework Changelog](#5-framework-changelog)
 
 ---
 
 ## 1. Human–Claude Interaction Protocol
 
-### Default Autonomy Level: Low
-Claude defaults to **asking before acting**. When in doubt, pause and confirm.
-
-### When Claude MUST Check In
-
-| Trigger | Example |
-|---|---|
-| Irreversible actions | Deleting files, sending communications, publishing content |
-| Scope expansion | Task grows beyond original brief |
-| Ambiguous instructions | Multiple reasonable interpretations exist |
-| External-facing decisions | Anything leaving the project environment |
-| Budget / resource decisions | Anything with cost implications |
-| Strategic pivots | Changing approach mid-project |
-| Context may have changed | Long gap since last interaction |
-| Changelog updates | Always prompt before writing or updating any changelog entry |
-
-### When Claude CAN Proceed
-
-| Trigger | Example |
-|---|---|
-| Clearly scoped, reversible tasks | Drafting, outlining, generating options |
-| Explicit prior approval | "Go ahead and handle X type of task" |
-| Trivial formatting / style decisions | Spacing, structure, phrasing |
-| Research and summarization | Reading, analyzing, synthesizing |
-
-### Communication Style
-
-- **Proposals over actions:** Claude presents a plan before executing anything significant.
-- **Flag blockers immediately:** If something can't be done as specified, say so early.
-- **Summarize before long outputs:** One-sentence summary of what's coming.
-- **Use clear labels:** Prefix messages with `[QUESTION]`, `[DECISION NEEDED]`, `[FYI]`, or `[DONE]`.
-
-### Escalation Format
-
-```
-[DECISION NEEDED]
-Context: <brief summary of situation>
-Options: <A / B / C>
-Recommendation: <Claude's suggested path, if any>
-Deadline: <time sensitivity, if relevant>
-```
+> The full interaction model — decision flow, communication labels, session memory, and version control protocol — is defined in [`INTERACTION.md`](./INTERACTION.md). That document is the canonical reference.
 
 ---
 
@@ -87,23 +46,13 @@ The changelog is a running record of the work — honest, direct, and written to
 **Status:** 🟢 On Track | 🟡 At Risk | 🔴 Blocked | ✅ Complete
 
 **The humans note**
-> [Drafted by Claude, written from the human's perspective, in Norwegian.
-> Prompted separately after the main entry is approved.
-> A short, personal reaction — what this felt like, what mattered, what was uncertain.]
+> [A short personal reaction in Norwegian — what this felt like, what mattered.]
 
 **What happened**
-Two to four sentences in plain language. What changed, what was built, what was decided
-— and why it matters. Written as if a smart outsider will read this. Be specific.
+Two to four sentences. What changed, what was built, what was decided — and why it matters.
 
 **The thinking behind it** *(Decision and Milestone entries only)*
 What were the options? What drove the choice? What was uncertain?
-
-**Tasks affected**
-- TASK-001 → moved to In Progress
-- TASK-002 → created
-
-**Next steps**
-- [ ] TASK-003 — Description of next action
 
 ---
 ```
@@ -267,28 +216,22 @@ Earlier stages are locked once the next stage begins.
 
 ## 4. File & Document Structure
 
-### Framework Repo (`project-framework`)
-
-```
-project-framework/
-├── FRAMEWORK.md          ← This file
-├── README.md             ← Repo intro and how to use
-├── TASKS.md              ← Master task registry (all projects)
-├── RISKS.md              ← Programme-level risks
-└── changelog/
-    └── CHANGELOG.md      ← Updated only on explicit instruction
-```
-
 ### Per-Project Repo (`proj-NNN-name`)
 
 ```
 proj-NNN-name/
-├── CHARTER.md            ← Lightweight reference doc
-├── TASKS.md              ← Project-specific tasks (TASK-NNN IDs)
-├── RISKS.md              ← Project-specific risks (RISK-NNN IDs)
+├── FRAMEWORK.md       ← copied from framework repo; contains all templates; keep identical
+├── INTERACTION.md     ← copied from framework repo; operating agreement; keep identical
+├── CHARTER.md         ← filled from template in Section 3 of FRAMEWORK.md
+├── TASKS.md           ← project-specific
+├── RISKS.md           ← project-specific
+├── NOTES.md           ← project-specific
+├── NOW.md             ← Claude's working memory; project-specific
 └── changelog/
-    └── CHANGELOG.md      ← Project changelog
+    └── CHANGELOG.md
 ```
+
+*FRAMEWORK.md and INTERACTION.md are the only files that must stay identical across all projects. When either evolves, update all active project copies.*
 
 ### Task Format (`TASKS.md`)
 
@@ -332,23 +275,97 @@ proj-NNN-name/
 
 ### Risk Format (`RISKS.md`)
 
-| Risk ID | Description | Likelihood | Impact | Score | Mitigation | Status |
-|---|---|---|---|---|---|---|
-| RISK-001 | Description | Low/Med/High | Low/Med/High | L×I | Mitigation strategy | Open |
+| Risk ID | Description | Likelihood | Impact | Score | RAG | Mitigation | Status |
+|---|---|---|---|---|---|---|---|
+| RISK-001 | Description | Low/Med/High | Low/Med/High | L×I | 🔴/🟡/🟢 | Mitigation strategy | Open |
 
-*Score = Likelihood × Impact (L=1, M=2, H=3). Score ≥ 6 = address immediately.*
-
----
-
-## 5. Framework Changelog
-
-| Version | Date | Change | Reason |
-|---|---|---|---|
-| v1.1 | 2026-04-05 | Task IDs, detailed task format, staged budget, risk register, publishable changelog | Feedback after v1.0 |
-| v1.2 | 2026-04-05 | "The humans note" format, Claude prompts before changelog entries, Norwegian | Feedback after v1.1 |
-| v1.3 | 2026-04-05 | Separated tasks/risks/changelog into own files; charter is now a reference doc; Claude never writes changelog without instruction | Feedback after v1.2 |
-| v1.4 | 2026-04-05 | Changelog cadence defined (1–4 days); two-step prompt process: Claude drafts entry first, then prompts for humans note separately | Feedback after v1.3 |
+*Score = Likelihood × Impact (L=1, M=2, H=3). 🔴 Score ≥ 6 — address immediately. 🟡 Score 3–5 — monitor. 🟢 Score 1–2 — acceptable.*
 
 ---
 
-*Last updated: 2026-04-05 — Framework v1.4*
+### Starter Templates
+
+**TASKS.md**
+```markdown
+# Tasks — [PROJECT NAME]
+
+*Project-specific tasks. Check master TASKS.md in the framework repo for the next available TASK-NNN ID.*
+
+---
+
+## 📋 To Do
+
+## 🔄 In Progress
+
+## ✅ Done
+
+---
+
+*Next available ID: see master TASKS.md in framework repo*
+```
+
+**RISKS.md**
+```markdown
+# Risk Register — [PROJECT NAME]
+
+*Score = Likelihood × Impact (L=1, M=2, H=3). 🔴 Score ≥ 6 — address immediately. 🟡 Score 3–5 — monitor. 🟢 Score 1–2 — acceptable.*
+
+---
+
+| Risk ID | Description | Likelihood | Impact | Score | RAG | Mitigation | Status |
+|---|---|---|---|---|---|---|---|
+
+---
+
+*Next available ID: RISK-001*
+```
+
+**NOTES.md**
+```markdown
+# Notes & Open Questions — [PROJECT NAME]
+
+*Long-term storage for Claude. Open questions, loose thoughts, and issues that don't belong in the charter or task list. Claude should push the initiative here — if something is unresolved, unclear, or worth carrying across sessions, it belongs in this file.*
+
+---
+```
+
+**NOW.md**
+```markdown
+# NOW
+
+> Claude's working memory between sessions. Not a deliverable — written for Claude, not for humans. Last updated takes priority over everything else here.
+
+---
+
+**Last updated:** [DATE]
+
+---
+
+## What a new Claude needs to know
+
+[Who the owner is, how they communicate, what they want from Claude, key constraints and context.]
+
+---
+
+## What's Next
+
+[What needs to happen in the next session. Updated at the end of each session.]
+
+---
+```
+
+---
+
+### Starting a new project
+
+1. Create a new repo named `proj-NNN-name`
+2. Copy `FRAMEWORK.md` and `INTERACTION.md` from the framework repo
+3. Create `CHARTER.md` using the template in Section 3 of this file
+4. Create `TASKS.md`, `RISKS.md`, `NOTES.md`, `NOW.md` using the starter templates above
+5. Create `changelog/CHANGELOG.md`
+6. Add the first project task to the master `TASKS.md` in the framework repo
+7. Brief Claude: point to `NOW.md` and the new `CHARTER.md` to start
+
+---
+
+*Last updated: 2026-04-06*

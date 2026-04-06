@@ -6,11 +6,18 @@
 
 ## 📋 To Do
 
-- [ ] [P1] TASK-002 — Start first real project using this framework
+- [ ] [P2] TASK-005 — Define acceptable complexity threshold for the framework
+  - **Goal:** Establish a clear, agreed definition of what "too complex to maintain" looks like — so RISK-001 has a real mitigation.
+  - **Context:** RISK-001 is our highest-scored risk but its mitigation is currently unresolved. Without a definition of complexity, we can't monitor or act on this risk.
+  - **Dependencies:** None.
+  - **Linked to:** RISK-001
+
+- [ ] [P2] TASK-002 — Start first real project using this framework
   - **Goal:** Identify and charter the first concrete project.
-  - **Context:** Framework is now in place; next step is proving it in practice.
+  - **Context:** Framework is now in place. A separate project is being developed independently and will serve as the first real test of this framework.
   - **Dependencies:** TASK-001 must be complete.
   - **Linked to:** Milestone: First real project started | PROJ-001 Section 5
+  - **Notes:** On hold — separate project in development. Will be linked here when ready.
 
 ---
 
@@ -38,4 +45,4 @@
 
 ---
 
-*Next available ID: TASK-005*
+*Next available ID: TASK-006*
